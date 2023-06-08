@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>курсовая</title>
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <link href="./styles.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript"></script>
+  </head>
+
+  <body>
+    <form
+      action="http://shifr.000.pe/form.php"
+      method="post"
+      enctype="multipart/form-data"
+    ></form>
+    <div class="container w-container">
+      <section class="section-heading wf-section">
+        <h1 class="heading">Шифроватор файлов онлайн без смс и регистрации</h1>
+        <p class="paragraph-under-head">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+          varius enim in eros elementum tristique. Duis cursus, mi quis viverra
+          ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat.
+          Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet. Nunc
+          ut sem vitae risus tristique posuere.
+        </p>
+      </section>
+    </div>
+    <div class="w-row">
+      <div
+        class="col-1 w-col w-col-6 w-col-stack w-col-small-small-stack w-col-tiny-tiny-stack"
+      >
+        <h3>Зашифровать файл</h3>
+        <p class="paragraph">
+          Чтобы зашифровать файл, введите пароль и затем загрузите желаемый
+          файл. (максимум 1.5 мб)
+        </p>
+        <section class="enc-pwd-submit-form wf-section">
+          <div class="enc-dec-form w-form">
+            <!-- form start -->
+            <form
+              enctype="multipart/form-data"
+              action="/form.php"
+              method="post"
+              id="enc-pass-form"
+              name="wf-form-"
+              data-name="enc pass form"
+            >
+              <!-- password -->
+              <label for="user-password-enc">Пароль</label>
+              <input
+                type="password"
+                class="text-field w-input"
+                maxlength="255"
+                name="user_pwd_enc"
+                data-name="user password enc"
+                placeholder="Введите пароль..."
+                id="user-password-enc"
+                required=""
+              />
+              <!--upload button-->
+              <input
+                type="submit"
+                name="submit"
+                value="Загрузить"
+                data-wait="Загрузка..."
+                class="button w-button"
+              />
+              <!--file input-->
+              <type="hidden" name="MAX_FILE_SIZE" value="1500000" />
+              <input type="file" id="myFile" name="file_enc_up" required="" />
+            </form>
+            <div class="w-form-done">
+              <div>Файл успешно загружен</div>
+            </div>
+            <div class="w-form-fail">
+              <div class="text-block">
+                <p>Ой!, что-то пошло не так... :(</p>
+                <br />Попробуйте снова
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+      <div
+        class="col-2 w-col w-col-6 w-col-stack w-col-small-small-stack w-col-tiny-tiny-stack"
+      >
+        <h3>Расшифровать файл</h3>
+        <p class="paragraph-2">
+          Чтобы расшифровать файл, введите пароль которым вы его зашифровали.
+        </p>
+        <div class="w-form">
+          <form
+            id="dec-pass-form"
+            name="wf-form-dec-pass-form"
+            data-name="dec pass form"
+            method="get"
+          >
+            <label for="user-password-dec">Пароль</label
+            ><input
+              type="password"
+              class="text-field w-input"
+              maxlength="256"
+              name="user-password-dec"
+              data-name="user password dec"
+              placeholder="Введите пароль..."
+              id="user-password-dec"
+              required=""
+            /><input
+              type="submit"
+              value="Загрузить"
+              data-wait="Загрузка..."
+              class="button w-button"
+            />
+          </form>
+          <div class="w-form-done">
+            <div>Расшифровка прошла успешно!</div>
+          </div>
+          <div class="w-form-fail">
+            <div>Ой!, что-то пошло не так... :(<br />Попробуйте снова</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <section class="other-stuff wf-section">
+      <h3>Heading</h3>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+        varius enim in eros elementum tristique. Duis cursus, mi quis viverra
+        ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat.
+        Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet. Nunc ut
+        sem vitae risus tristique posuere.<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />‍
+      </p>
+    </section>
+  </body>
+</html>
