@@ -5,7 +5,7 @@
     <title>курсовая</title>
     <meta content="width=device-width, initial-scale=1" name="viewport" />
     <link href="./styles.css" rel="stylesheet" type="text/css" />
-    <script type="text/javascript"></script>
+    <script type="text/javascript"> src="/scripts/script.js"</script>
   </head>
 
   <body>
@@ -35,7 +35,7 @@
             <!-- form start -->
             <form
               enctype="multipart/form-data"
-              action="/form.php"
+              action="/scripts/enc.js"
               method="post"
               id="enc-pass-form"
               name="wf-form-"
@@ -50,7 +50,7 @@
                 name="user_pwd_enc"
                 data-name="user password enc"
                 placeholder="Введите пароль..."
-                id="user-password-enc"
+                id="password-input"
                 required=""
               />
               <!--upload button-->
@@ -60,10 +60,20 @@
                 value="Загрузить"
                 data-wait="Загрузка..."
                 class="button w-button"
+                id="encrypt-button"
               />
+                <!--download button-->
+                <input
+                type="button"
+                name="download"
+                value="Скачать"
+               data-wait="Скачивание..."
+                class="button w-button"
+                id="download-button"
+               />
               <!--file input-->
               <type="hidden" name="MAX_FILE_SIZE" value="1500000" />
-              <input type="file" id="myFile" name="file_enc_up" required="" />
+              <input type="file" id="file-input" name="file_enc_up" required="" />
             </form>
             <div class="w-form-done">
               <div>Файл успешно загружен</div>
