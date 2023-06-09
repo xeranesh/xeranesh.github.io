@@ -2,7 +2,7 @@
 const form = document.getElementById("enc-pass-form");
 
 // When the form is submitted
-form.addEventListener("submit", (event) => {
+form.addEventListener("enc-pass-form", (event) => {
   // Prevent the default form submission behavior
   event.preventDefault();
 
