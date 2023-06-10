@@ -338,7 +338,7 @@ async function encryptfile() {
 
   if (!cipherbytes) {
     spnEncstatus.classList.add("redspan");
-    spnEncstatus.innerHTML = "<p>Error encrypting file.  See console log.</p>";
+    spnEncstatus.innerHTML = "<p>Ошибка шифрования файла.</p>";
     return;
   }
 
@@ -356,7 +356,7 @@ async function encryptfile() {
   aEncsavefile.download = objFile.name + ".enc";
 
   spnEncstatus.classList.add("greenspan");
-  spnEncstatus.innerHTML = "<p>File encrypted.</p>";
+  spnEncstatus.innerHTML = "<p>Файл зашифрован.</p>";
   aEncsavefile.hidden = false;
 }
 
@@ -420,7 +420,7 @@ async function decryptfile() {
   if (!plaintextbytes) {
     spnDecstatus.classList.add("redspan");
     spnDecstatus.innerHTML =
-      "<p>Error decrypting file.  Password may be incorrect.</p>";
+      "<p>Не получилось расщифровать файл. Возможно вы ввели неправельный пароль.</p>";
     return;
   }
 
@@ -433,7 +433,7 @@ async function decryptfile() {
   aDecsavefile.download = objFile.name + ".dec";
 
   spnDecstatus.classList.add("greenspan");
-  spnDecstatus.innerHTML = "<p>File decrypted.</p>";
+  spnDecstatus.innerHTML = "<p>Файл расшифрован.</p>";
   aDecsavefile.hidden = false;
 }
 </script>
