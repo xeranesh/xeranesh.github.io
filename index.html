@@ -12,14 +12,19 @@
 				<div class="divTableBody">
 					<div class="divTableRow">
 						<div class="divTableCell" style="float: left;">
-							<h1>Шифроватор файлов онлайн без смс и регистрации</h1>
-							<h4>          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-								varius enim in eros elementum tristique. Duis cursus, mi quis viverra
-								ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat.
-								Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet. Nunc
-								ut sem vitae risus tristique posuere.</h4>
+							<h1>Шифратор файлов онлайн без смс и регистрации</h1>
+							<h3>
+                Этот бесплатный онлайн-инструмент обеспечивает мгновенное шифрование и дешифрование любого файла.
+                Он может зашифровать любой файл с любым расширением. Он предоставляет механизм для шифрования файла
+                с помощью вашего собственного секретного ключа (пароля).
+                Любой ввод или вывод файла\пароля, который вы вводите или генерируете,
+                не хранится на этом сайте.
+                <br> 
+                Данный инструмент предоставляется через URL-адрес HTTPS,
+               чтобы гарантировать, что файл не может быть украден.
+              </h3>
 						</div>
-						<div class="divTableCell" style="float: right;">
+						<div class="divTableCell" style="float: left;">
 							<h1>
 							<button id="btnRefresh" onClick="javascript:location.reload();">Обновить страницу</button>
 							<button id="btnDivEncrypt" onClick="javascript:switchdiv('encrypt');">Зашифровать</button>
@@ -130,14 +135,24 @@
 
 		<div class="container">
 			<hr>
-      <h3>Heading</h3>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-        varius enim in eros elementum tristique. Duis cursus, mi quis viverra
-        ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat.
-        Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet. Nunc ut
-        sem vitae risus tristique posuere.‍
-      </p>
+      <h3>КАК ПОЛЬЗОВАТЬСЯ</h3>
+      <ol>
+        <li>Для шифрования просто загрузите файл</li>
+        <br>
+        <li>Введите пароль которым хотите его зашифровать</li>
+        <br>
+       <li>Нажмите кнопку «Зашифровать»</li>
+       <br>
+        <li>Cкачайте зашифрованный файл</li>
+      </ol>
+      <strong>Следует учесть, что зашифрованный файл или его имя не должны быть изменены каким-либо образом,
+       иначе процесс дешифрования не сможет расшифровать зашифрованный файл.
+      </strong>
+      <br></br>
+      <strong>ЗАПОМНИТЕ СЕКРЕТНЫЙ КЛЮЧ (ПАРОЛЬ) !!!</strong>
+      <p>Ключ нигде не хранится на этой платформе, следовательно, 
+        если ключ шифрования утерян, файл никогда не сможет быть снова расшифрован без того же ключа шифрования,
+        который использовался во время шифрования файла.</p>
 		</div>
 		<BR>
 	</body>
@@ -164,6 +179,7 @@ function switchdiv(t) {
   }
 }
 
+//длинна пароля
 function encvalidate() {
   if (
     txtEncpassphrase.value.length >= 1
@@ -190,15 +206,15 @@ function decvalidate() {
   }
 }
 
-//drag and drop functions:
+//drag and drop:
 //https://developer.mozilla.org/en-US/docs/Web/API/HTML_Drag_and_Drop_API/File_drag_and_drop
 function drop_handler(ev) {
   console.log("Drop");
   ev.preventDefault();
-  // If dropped items aren't files, reject them
+  // проверка на файл
   var dt = ev.dataTransfer;
   if (dt.items) {
-    // Use DataTransferItemList interface to access the file(s)
+    //DataTransferItemList чтобы получить доступ к файлам
     for (var i = 0; i < dt.items.length; i++) {
       if (dt.items[i].kind == "file") {
         var f = dt.items[i].getAsFile();

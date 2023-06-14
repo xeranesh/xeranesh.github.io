@@ -50,7 +50,7 @@ a:hover {
 }
 .divTableCell {
   display: table-cell;
-  padding: 3px 3px;
+  padding: 0px 0px;
 }
 .divTableBody {
   display: table-row-group;
